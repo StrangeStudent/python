@@ -21,5 +21,6 @@ from phonebook import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomePageView.as_view())
+    path('', views.HomePage.as_view(), name='home'),
+    path('add/', views.CreatePersonForm.as_view(), name='add')
 ]
